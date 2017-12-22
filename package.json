@@ -1,0 +1,32 @@
+{
+  "name": "desktop",
+  "version": "1.0.0",
+  "main": "new 1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "cloudscraper": "^1.4.1",
+    "crawl": "^0.3.1",
+    "crawler": "^1.1.1",
+    "crawler-js": "^2.0.1",
+    "ent": "^2.2.0",
+    "fs": "0.0.1-security",
+    "kaiser": "0.0.4",
+    "kaiser-crawler": "^1.0.5",
+    "node-simple-crawler": "^0.1.6",
+    "request": "^2.83.0",
+    "require": "^2.4.20",
+    "sqlite3": "^3.1.13",
+    "sqlstring": "^2.3.0",
+    "throw": "^1.1.0",
+    "tor-request": "^1.0.6",
+    "underscore": "^1.8.3",
+    "url-parse": "^1.2.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
