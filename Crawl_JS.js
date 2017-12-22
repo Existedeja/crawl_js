@@ -7,7 +7,7 @@ var socks = require('socks');
 const sqlite3 = require('sqlite3').verbose();
 var SqlString = require('sqlstring');
 
-var START_URL = process.argv[2];
+var START_URL = process.argv[2]; // the URL I take in parameter "www.myexemple.com"
 var SEARCH_WORD = 'prix';
 var MAX_PAGES_TO_VISIT = 10000;
 
@@ -18,8 +18,8 @@ var numPagesVisited = 0;
 var pageToVisit = [];
 var url = new URL(START_URL);
 var baseUrl = url.protocol + "//" + url.hostname;
-var nomurl = START_URL.split('.');
-var domaine = nomurl[1];
+var nomurl = START_URL.split('.'); //parse my url
+var domaine = nomurl[1]; //and Keep the ""myexemple" part only
   
  tr.TorControlPort.password = 'root';
  pageToVisit.push(START_URL);
@@ -74,8 +74,8 @@ function visitPage(url, callback) {
 		 return;
 	 }
      var $ = cheerio.load(body);
-	 if (domaine === "cigaretteelec")
-		var isWordFound = cigaretteelec($, SEARCH_WORD);
+	 if (domaine === "myexemple") //verified the url is the one we want crawl, and export data
+		var isWordFound = my_website($, SEARCH_WORD);
      if(isWordFound) {
        console.log("exportation des produits et de leur prix");
      } 
@@ -84,7 +84,7 @@ function visitPage(url, callback) {
   });
 }
 
-function cigaretteelec($, word) {
+function my_website($, word) {
 
 	var product = [];
 	var price = [];
